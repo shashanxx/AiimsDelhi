@@ -1,0 +1,45 @@
+﻿body {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.w-15 {
+    width: 15rem;
+}
+
+.loader-background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    width: 8rem;
+    height: 8rem;
+    border: 1rem solid lightgray;
+    border-top: 1rem solid black;
+    border-bottom: 1rem solid black;
+    border-radius: 50%;
+    animation-name: loaderWheel;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /*display: none;*/
+    margin: auto;
+}
+
+@keyframes loaderWheel{
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

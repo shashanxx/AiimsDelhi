@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminMaster.master.cs" Inherits="admin_adminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <title>Aiims Delhi</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+
+            <div class="row">
+                <%--menu--%>
+                <div class="col-md-3 vh-100 bg-dark">
+                    <div class="text-white pt-3 pb-3">
+                        <h5>Hello,
+                            <asp:Label runat="server" ID="lblUserName"></asp:Label></h5>
+                    </div>
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item pt-3">
+                            <a class="nav-link text-white" href="dashboard.aspx">Upload Excel Data</a>
+                        </li>
+                        <li class="nav-item pt-3" id="step2" runat="server" visible="false">
+                            <a class="nav-link text-white" href="updatedata.aspx">Update ATC Code</a>
+                        </li>
+                        <li class="nav-item pt-3" id="step3" runat="server" visible="false">
+                            <a class="nav-link text-white" href="updatesubjectdata.aspx">Update Subject Code & Subject Code PH</a>
+                        </li>
+                        <li class="nav-item pt-3" id="step4" runat="server" visible="false">
+                            <a class="nav-link text-white" href="examdatasummary.aspx">Exam Data Summary</a>
+                        </li>
+                        <li class="nav-item pt-3">
+                            <a class="nav-link text-white" href="login.aspx">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <%--header & content--%>
+                <div class="col-md-9">
+                    <div class="row mx-auto">
+                        <div class="col-md-4">
+                            <img src="../images/logo.png" alt="Logo of AIIMS Delhi" class="img-fluid d-block pt-4 pb-4 float-end" />
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="pt-4 pb-4">अखिल भारतीय आयुर्विज्ञान संस्थान, नई दिल्ली<br />
+                                All India Institute Of Medical Sciences, New Delhi
+                            </h3>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <asp:ContentPlaceHolder ID="cph_body_AdminMaster" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+
+            <!--copyright-->
+            <div class="row fixed-bottom">
+                <div class="col-md-12 text-center pt-2 pb-2">
+                    Copyright &copy; 2022 | AIIMS DELHI
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
