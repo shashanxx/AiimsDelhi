@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cph_body_AdminMaster" runat="Server">
     <div class="col-md-12 pb-3">
-        <h3>Exam Data Summary</h3>
+        <h3>Exam Data Summary & CSV</h3>
     </div>
 
     <%--download full exam data--%>
@@ -14,6 +14,14 @@
     </div>
     <div runat="server" visible="false">
         <asp:GridView runat="server" ID="gvFullExcelData"></asp:GridView>
+    </div>
+    <div class="col-md-12">
+        <hr />
+    </div>
+    
+    <%--download full exam CSV--%>
+    <div class="col-md-12 pt-3 pb-3">
+        <asp:Button ID="btnDownloadCSV" runat="server" CssClass="btn btn-dark" Text="Download Full Exam CSV" OnClick="btnDownloadCSV_Click" />
     </div>
 
     <div class="col-md-12">

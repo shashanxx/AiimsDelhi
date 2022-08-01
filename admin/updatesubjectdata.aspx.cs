@@ -82,11 +82,11 @@ public partial class admin_updatesubjectdata : System.Web.UI.Page
                                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Notify", "alert('Column C (SubjectCode) can not be empty.');window.location='dashboard.aspx'", true);
                                 return;
                             }
-                            if (cell.Address.ColumnLetter == "D" && string.IsNullOrEmpty(cell.Value.ToString()))
-                            {
-                                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Notify", "alert('Column D (subjectcodePH) can not be empty.');window.location='dashboard.aspx'", true);
-                                return;
-                            }
+                            //if (cell.Address.ColumnLetter == "D" && string.IsNullOrEmpty(cell.Value.ToString()))
+                            //{
+                            //    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Notify", "alert('Column D (subjectcodePH) can not be empty.');window.location='dashboard.aspx'", true);
+                            //    return;
+                            //}
 
                             dt.Rows[dt.Rows.Count - 1][i] = cell.Value.ToString();
                             i++;

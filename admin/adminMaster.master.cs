@@ -30,23 +30,36 @@ public partial class admin_adminMaster : System.Web.UI.MasterPage
             step3.Visible = false;
             step4.Visible = false;
 
+            imgTick1.Visible = false;
+            imgTick2.Visible = false;
+            imgTick3.Visible = false;
+
             if (Convert.ToInt32(dataSet.Tables[0].Rows[0]["step2"]) > 0 && Convert.ToInt32(dataSet.Tables[0].Rows[0]["step3"]) > 0 &&
                 Convert.ToInt32(dataSet.Tables[0].Rows[0]["step4"]) > 0)
             {
                 step2.Visible = true;
                 step3.Visible = true;
                 step4.Visible = true;
+
+                imgTick1.Visible = true;
+                imgTick2.Visible = true;
+                imgTick3.Visible = true;
             }
             else if (Convert.ToInt32(dataSet.Tables[0].Rows[0]["step2"]) > 0 && Convert.ToInt32(dataSet.Tables[0].Rows[0]["step3"]) > 0 &&
                 Convert.ToInt32(dataSet.Tables[0].Rows[0]["step4"]) == 0)
             {
                 step2.Visible = true;
                 step3.Visible = true;
+
+                imgTick1.Visible = true;
+                imgTick2.Visible = true;
             }
             else if (Convert.ToInt32(dataSet.Tables[0].Rows[0]["step2"]) > 0 && Convert.ToInt32(dataSet.Tables[0].Rows[0]["step3"]) == 0 &&
                 Convert.ToInt32(dataSet.Tables[0].Rows[0]["step4"]) == 0)
             {
                 step2.Visible = true;
+
+                imgTick1.Visible = true;
             }
         }
     }

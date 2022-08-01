@@ -39,6 +39,25 @@ public partial class admin_examdatasummary : System.Web.UI.Page
         }
     }
 
+    protected void btnDownloadCSV_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            DataSet dataSet = MySql.GetDataSet("sp_getCSV");
+            gvFullExcelData.DataSource = dataSet;
+            gvFullExcelData.DataBind();
+
+            if (dataSet != null && dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+            {
+                ExportGridToExcel(dataSet, "AiimsDelhiExamDataCSV");
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write("Message: " + ex.Message + "<br />Stack Trace: " + ex.StackTrace);
+        }
+    }
+
     public void getExamDataDetails(string timeline)
     {
         DataSet dataSet = MySql.GetDataSet("spGet_FullExamdataDetails");

@@ -27,16 +27,16 @@
                     </div>
                     <ul class="nav nav-pills flex-column">
                         <li class="nav-item pt-3">
-                            <a class="nav-link text-white" href="dashboard.aspx">Upload Excel Data</a>
+                            <a class="nav-link text-white" href="dashboard.aspx">Upload Excel Data Step - 1 <img id="imgTick1" runat="server" src="~/images/utilities/tick.png" alt="tick" width="25" visible="false" /></a>
                         </li>
                         <li class="nav-item pt-3" id="step2" runat="server" visible="false">
-                            <a class="nav-link text-white" href="updatedata.aspx">Update ATC Code</a>
+                            <a class="nav-link text-white" href="updatedata.aspx">Update ATC Code Step - 2 <img id="imgTick2" runat="server" src="~/images/utilities/tick.png" alt="tick" width="25" visible="false" /></a>
                         </li>
                         <li class="nav-item pt-3" id="step3" runat="server" visible="false">
-                            <a class="nav-link text-white" href="updatesubjectdata.aspx">Update Subject Code & Subject Code PH</a>
+                            <a class="nav-link text-white" href="updatesubjectdata.aspx">Update Subject Code & Subject Code PH Step - 3 <img id="imgTick3" runat="server" src="~/images/utilities/tick.png" alt="tick" width="25" visible="false" /></a>
                         </li>
                         <li class="nav-item pt-3" id="step4" runat="server" visible="false">
-                            <a class="nav-link text-white" href="examdatasummary.aspx">Exam Data Summary</a>
+                            <a class="nav-link text-white" href="examdatasummary.aspx">Exam Data Summary & CSV</a>
                         </li>
                         <li class="nav-item pt-3">
                             <a class="nav-link text-white" href="login.aspx">Logout</a>
